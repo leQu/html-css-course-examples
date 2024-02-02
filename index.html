@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="positioning.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Our new site</title>
+</head>
+<body>
+    <div class="hero">
+        <h2>NU FUNKAR DET</h2>
+        <img class="hero-img" src="https://loveincorporated.blob.core.windows.net/contentimages/gallery/08afbe0f-350d-480d-9421-57274208714e-Black_forest_germany.jpg">
+    </div>
+    <nav>
+        <span><strong>LOLO</strong>GOGO</span>      
+        <input type="checkbox" name="" id="nav-button">
+        <ul id="links" class="links" >     
+            <li><a class="navLinks" href="#">HOME</a></li>
+            <li><a class="navLinks" href="/flexbox.html">FLEXBOX</a></li>
+            <li><a class="navLinks" href="/grid.html">GRID</a></li>
+            <li><a class="navLinks" href="/tables.html">TABLES</a></li>
+        </ul>
+        <label id="nav-button-label" for="nav-button">&#9776;</label>
+    </nav>
+    <header>
+        <h1>We are talking about positioning!</h1>
+    </header>
+    <main>
+        <article class="introduction">
+            <h2 class="introduction-title">New things on our site</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate eius ipsam recusandae temporibus veniam amet optio totam nulla odio obcaecati voluptatum quisquam non, ea atque suscipit. Voluptas ipsam doloribus officia!</p>
+            <p>Placeat iure reprehenderit, consequuntur accusamus repellat quidem repudiandae facere quam illo nostrum optio asperiores officia quibusdam voluptatibus neque? Numquam ea, itaque quidem rerum praesentium autem hic culpa adipisci fuga aliquam.</p>
+            <p>Optio magnam voluptate ducimus error, accusantium consequuntur eveniet! Ipsum accusantium reiciendis officia expedita rerum odit, natus reprehenderit? Nam repellendus saepe numquam incidunt cupiditate soluta enim facilis provident recusandae, magni illum?</p>
+            <div class="family">
+                <label for="checkin">&#9776;</label>
+                <input style="display: none;" type="checkbox" name="" id="checkin">
+                <span id="heyhey">HeyHeyHey</span>
+            </div>
+        </article>
+        <aside>
+            <h2>Older things</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum officiis asperiores non eos eligendi blanditiis quia magni sapiente iure sint.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum officiis asperiores non eos eligendi blanditiis quia magni sapiente iure sint.</p>
+        </aside>
+    </main>
+    <iframe width="100%" height="515" allowfullscreen
+        src="https://www.youtube.com/embed/tgbNymZ7vqY">
+    </iframe>
+    <footer>
+        FOOT
+    </footer>
+
+    <script>
+        const fadeInElement = document.querySelector('.family');
+        const observer = new IntersectionObserver(entries => {
+            const [entry] = entries;
+            if (entry.isIntersecting) {
+                console.log("IN VIEW")
+                entry.target.classList.add('tada');
+            }
+        });
+
+        observer.observe(fadeInElement);
+    </script>
+</body>
+</html>
