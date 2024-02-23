@@ -1,0 +1,33 @@
+nav {
+  position: sticky;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: -1px;
+  background-color: darkmagenta;
+  padding: 10px;
+  height: 50px;
+}
+nav span {
+  font-size: 20px;
+  padding-left: 50px;
+}
+
+nav a:hover {
+  font-size: 30px;
+  color: red;
+  background-color: yellow;
+  transform: skew(15deg, 15deg);
+}
+
+nav a {
+  background-color: blue;
+  font-weight: 700;
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition-property: background-color;
+  transition-duration: 2s;
+  transition-timing-function: linear;
+  /* transition: background-color 0.2s linear; */
+} /*# sourceMappingURL=index.css.map */

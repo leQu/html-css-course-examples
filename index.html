@@ -5,9 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="positioning.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
     <title>Our new site</title>
+    <script>
+        let isDark = false;
+        function changeTheme(){
+            if(isDark){
+                isDark = false;
+                document.documentElement.style.setProperty('--main-bg-color', 'lightblue');
+                document.documentElement.style.setProperty('--aside-bg-color', 'darkblue')
+            }
+            else {
+                isDark = true;
+                document.documentElement.style.setProperty('--main-bg-color', 'darkcyan');
+                document.documentElement.style.setProperty('--aside-bg-color', 'cadetblue')
+            }
+        }
+
+        function runCanvas(){
+            const canvas = document.getElementById('myCanvas');
+            // Get the 2D drawing context
+            const ctx = canvas.getContext('2d');
+    
+            // Draw a red rectangle
+            ctx.fillStyle = 'red';
+            ctx.fillRect(50, 50, 100, 50);
+    
+            // Draw a blue circle
+            ctx.beginPath();
+            ctx.arc(300, 100, 30, 0, Math.PI * 2);
+            ctx.fillStyle = 'blue';
+            ctx.fill();
+    
+            // Draw text
+            ctx.font = '20px Arial';
+            ctx.fillStyle = 'black';
+            ctx.fillText('Hello, Canvas!', 50, 150);
+        }
+
+    </script>
 </head>
 <body>
+    <button class="darkmode-btn" onclick="changeTheme()">Byt Tema</button>
     <div class="hero">
         <h2>NU FUNKAR DET</h2>
         <img class="hero-img" src="https://loveincorporated.blob.core.windows.net/contentimages/gallery/08afbe0f-350d-480d-9421-57274208714e-Black_forest_germany.jpg">
@@ -32,21 +71,29 @@
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate eius ipsam recusandae temporibus veniam amet optio totam nulla odio obcaecati voluptatum quisquam non, ea atque suscipit. Voluptas ipsam doloribus officia!</p>
             <p>Placeat iure reprehenderit, consequuntur accusamus repellat quidem repudiandae facere quam illo nostrum optio asperiores officia quibusdam voluptatibus neque? Numquam ea, itaque quidem rerum praesentium autem hic culpa adipisci fuga aliquam.</p>
             <p>Optio magnam voluptate ducimus error, accusantium consequuntur eveniet! Ipsum accusantium reiciendis officia expedita rerum odit, natus reprehenderit? Nam repellendus saepe numquam incidunt cupiditate soluta enim facilis provident recusandae, magni illum?</p>
-            <div class="family">
+            <button class="goOnBtn">Go on</button>
+            <!-- <div class="family">
                 <label for="checkin">&#9776;</label>
                 <input style="display: none;" type="checkbox" name="" id="checkin">
                 <span id="heyhey">HeyHeyHey</span>
-            </div>
+            </div> -->
         </article>
         <aside>
             <h2>Older things</h2>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum officiis asperiores non eos eligendi blanditiis quia magni sapiente iure sint.</p>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum officiis asperiores non eos eligendi blanditiis quia magni sapiente iure sint.</p>
+            <div class="slideshow">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
         </aside>
     </main>
     <iframe width="100%" height="515" allowfullscreen
         src="https://www.youtube.com/embed/tgbNymZ7vqY">
     </iframe>
+    <canvas id="myCanvas" width="400" height="200"></canvas>
+    <button onclick="runCanvas()">RUN</button>
     <footer>
         FOOT
     </footer>
@@ -62,6 +109,7 @@
         });
 
         observer.observe(fadeInElement);
+
     </script>
 </body>
 </html>

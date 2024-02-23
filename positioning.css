@@ -3,10 +3,6 @@ nav {
   top: -1px;
 }
 
-nav a:hover {
-  scale: 1.2;
-}
-
 nav a:active {
   color: cadetblue;
 }

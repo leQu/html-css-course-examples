@@ -1,0 +1,22 @@
+@import 'variables';
+@import 'myMixins';
+
+nav {
+   @include flex-center; 
+    position: sticky;
+    top: -1px;
+    background-color: $primary-color;
+    padding: 10px;
+    
+    span {
+      font-size: 20px;
+      padding-left: 50px;
+    }
+    
+    a {
+        font-weight: 700;
+        display: inline-block;
+        padding: 10px 20px;
+        text-decoration: none;
+      }
+  }
